@@ -5,9 +5,9 @@ import { query } from "@/db"; // Ensure this path is correct
 //elastic search client
 const { Client } = require("@elastic/elasticsearch");
 const client = new Client({
-  node: "https://bd17000e9ecd4823b01c201238257db9.us-central1.gcp.cloud.es.io:443",
+  node: process.env.ELASTICSEARCH_API_NODE,
   auth: {
-    apiKey: "YWpMdVg0d0JaYWRnUV9sZUwwMmI6bVpZYmdiRzhUVkt5M19ZMmtLVm9VUQ==",
+    apiKey: process.env.ELASTICSEARCH_API_KEY,
   },
 });
 
